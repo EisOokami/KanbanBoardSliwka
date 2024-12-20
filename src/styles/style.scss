@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .sidebar__tabs {
+        @apply relative flex items-center w-full text-gray-400 hover:text-black font-medium hover:bg-gray-50 rounded-lg cursor-pointer transition-colors;
+    }
+
+    .sidebar__tabs--active {
+        @apply text-black bg-white hover:bg-white border rounded-lg cursor-pointer;
+    }
+
+    .sidebar__tabs-icon {
+        @apply text-2xl;
+    }
+
+    .path__items {
+        @apply flex items-center p-1 xl:p-2 lg:text-lg xl:text-xl hover:bg-gray-100 rounded-md transition cursor-pointer;
+    }
+
+    .path__items--active {
+        @apply lg:p-1 xl:p-2 text-black bg-gray-200 hover:bg-gray-200 rounded-md;
+    }
+
+    .path__items-icon {
+        @apply w-4 h-4 ml-2 text-gray-500;
+    }
+
+    .overview__items {
+        @apply px-3 py-1 text-sm lg:text-base text-gray-500 hover:text-black font-medium hover:bg-gray-100 rounded-md cursor-pointer transition;
+    }
+
+    .overview__items--active {
+        @apply text-black font-medium bg-white rounded-md transition;
+    }
+
+    .overview__btns {
+        @apply flex items-center gap-2 px-3 py-2 text-white bg-bright-blue hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg focus:outline-none transition;
+    }
+
+    .modal-edit-task__items {
+        @apply px-2 font-medium border-b hover:border-bright-blue cursor-pointer transition;
+    }
+
+    .modal-edit-task__items--active {
+        @apply border-b-2 border-bright-blue transition;
+    }
+
+    .modal-edit-task__inputs {
+        @apply w-full h-full outline-none;
+    }
+
+    .modal-edit-task__inputs-edit {
+        @apply px-1 py-1 border rounded-lg focus:border-blue-500 focus:ring focus:ring-blue-200;
+    }
+
+    .modal-new-task__label {
+        @apply font-medium text-gray-600;
+    }
+
+    .modal-new-task__input {
+        @apply px-3 py-2 border rounded-lg focus:border-blue-500 focus:ring focus:ring-blue-200;
+    }
+}
+
+@layer components {
+    .custom-scrollbar {
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #0096ff;
+            border-radius: 5px;
+        }
+    }
+}
+
+.react-datepicker-popper {
+    .react-datepicker {
+        border: none;
+        border-radius: 20px;
+        box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+
+        .react-datepicker__navigation {
+            top: 6px;
+
+            .react-datepicker__navigation-icon::before {
+                border-color: #686868;
+            }
+        }
+
+        .react-datepicker__header {
+            background-color: #fff;
+            border-bottom: none;
+            border-radius: 20px;
+
+            .react-datepicker__current-month {
+                padding: 5px 0;
+            }
+        }
+
+        .react-datepicker__day {
+            border-radius: 100%;
+            transition-property: color, background-color, border-color,
+                text-decoration-color, fill, stroke, opacity, box-shadow,
+                transform, filter, backdrop-filter;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+
+            &:hover {
+                border-radius: 100%;
+            }
+        }
+
+        .react-datepicker__day--selected {
+            background-color: #0096ff;
+            border-radius: 100%;
+
+            &:hover {
+                background-color: #0096ff;
+                border-radius: 100%;
+            }
+        }
+
+        .react-datepicker__day--keyboard-selected {
+            background-color: #bce3ffbe;
+
+            &:hover {
+                background-color: #32aaffbe;
+            }
+        }
+    }
+
+    .react-datepicker__triangle {
+        stroke: none;
+        color: #fff !important;
+        fill: #fff !important;
+    }
+}
+
+.react-datepicker__input-container {
+    display: flex;
+    align-items: center;
+
+    svg {
+        top: 3px;
+        cursor: pointer;
+    }
+}
+
+.rc-time-picker {
+    display: flex !important;
+    align-items: center !important;
+
+    .rc-time-picker-input {
+        width: 100%;
+        height: auto;
+        padding: 5px 0 6px;
+        padding-left: 30px;
+        color: #000;
+        font-size: 15px;
+        border: 1px solid #e5e7eb;
+        border-radius: 7px;
+    }
+
+    svg {
+        position: absolute;
+        top: 10px;
+        left: 8px;
+        cursor: pointer;
+    }
+
+    .rc-time-picker-clear {
+        top: 6px;
+
+        i::after {
+            color: #000;
+            font-size: 18px;
+        }
+    }
+}
+
+.rc-time-picker-panel-narrow {
+    max-width: 100% !important;
+
+    .rc-time-picker-panel-input-wrap {
+        padding: 4px;
+        .rc-time-picker-panel-input {
+            font-size: 16px;
+        }
+    }
+
+    .rc-time-picker-panel-select {
+        font-size: 15px;
+
+        li {
+            text-align: center;
+            padding: 0;
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        &:last-child {
+            border-right: 1px solid #e9e9e9;
+        }
+    }
+}
+
+.modal-edit-task {
+    .react-datepicker__view-calendar-icon {
+        input {
+            padding: 0;
+        }
+
+        .react-datepicker__calendar-icon {
+            top: -3.1px;
+        }
+    }
+
+    .rc-time-picker {
+        .rc-time-picker-input {
+            width: 115px;
+            height: 28px;
+        }
+
+        .rc-time-picker-clear {
+            top: 1px;
+        }
+
+        svg {
+            top: 7px;
+        }
+    }
+}
