@@ -25,7 +25,7 @@ Welcome to the **Kanban Board Sliwka**! This application is designed to help tea
 
 ## Demo
 
-Check out the live demo [here](https://kanban-board-sliwka.vercel.app/).
+Check out the live demo [first here](https://kanban-board-sliwka.vercel.app/), [second here](https://kanban-board-sliwka.sloudhost.ovh/).
 
 ## Installation
 
