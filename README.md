@@ -38,7 +38,7 @@ To get a local copy up and running, follow these simple steps:
 ### Clone the repository
 
 ```sh
-git clone https://github.com/LakioLive/KanbanBoardSliwka
+git clone https://github.com/EisOokami/KanbanBoardSliwka
 cd KanbanBoardSliwka
 ```
 
@@ -107,3 +107,4 @@ Inspiration, code snippets, etc.
 ---
 
 Thank you for visiting the Kanban Board Sliwka! If you have any questions or feedback, please feel free to open an issue or contribute to the project.
+
